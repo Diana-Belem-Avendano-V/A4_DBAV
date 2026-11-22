@@ -117,23 +117,31 @@ microservicio-autos/
 
 ### Pasos
 
-1. **Descomprime** `microservicio-autos.zip` (por ejemplo en Documentos).
-2. En VS Code: **File → Open Folder…** y selecciona la carpeta `microservicio-autos`.
-   Si aparece *"Do you trust the authors?"*, elige **Yes, I trust the authors**.
+1. **Clona el repositorio** de https://github.com/Diana-Belem-Avendano-V/A4_DBAV
+   de una de estas dos formas:
+   - **Desde VS Code:** abre la paleta de comandos (`Ctrl + Shift + P`), escribe
+     **Git: Clone**, pega la URL `https://github.com/Diana-Belem-Avendano-V/A4_DBAV.git`,
+     elige la carpeta donde guardarlo y, al terminar, da clic en **Open**.
+   - **Desde la terminal:**
+```bash
+git clone https://github.com/Diana-Belem-Avendano-V/A4_DBAV.git
+cd A4_DBAV
+code .
+```
+2. Si aparece *"Do you trust the authors?"*, elige **Yes, I trust the authors**.
 3. Abre la terminal integrada con **Terminal → New Terminal** (`Ctrl + ñ` o `` Ctrl + ` ``)
    e instala las dependencias (solo la primera vez):
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 4. **Inicia el microservicio.** Puedes hacerlo de dos formas:
    - **Opción A (terminal):**
-     ```bash
-     npm start
-     ```
+```bash
+npm start
+```
    - **Opción B (F5):** ve a **Run and Debug** (`Ctrl + Shift + D`), elige
      **"Iniciar microservicio"** y presiona **F5**. El navegador se abre solo y
      puedes poner *breakpoints* en `index.js`.
-
    En la terminal debe aparecer:
    `Microservicio de autos escuchando en el puerto 3000`
 5. **Revisa el resultado en el navegador:**
