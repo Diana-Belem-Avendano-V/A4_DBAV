@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de autos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Catálogo de autos</h1>
+    <p>Datos recuperados del microservicio <code>/api/autos</code></p>
+  </header>
+
+  <main>
+    <form id="filtros">
+      <label>Marca
+        <select id="marca"><option value="">Todas</option></select>
+      </label>
+      <label>Color
+        <select id="color"><option value="">Todos</option></select>
+      </label>
+      <label>Precio máximo
+        <input type="number" id="precioMax" placeholder="Ej. 500000" min="0" step="10000" />
+      </label>
+      <label>Ordenar por
+        <select id="orden">
+          <option value="">Sin orden</option>
+          <option value="precio">Precio</option>
+          <option value="anio">Año</option>
+          <option value="marca">Marca</option>
+        </select>
+      </label>
+      <label>Dirección
+        <select id="dir">
+          <option value="asc">Ascendente</option>
+          <option value="desc">Descendente</option>
+        </select>
+      </label>
+      <button type="submit">Buscar</button>
+    </form>
+
+    <p id="estado"></p>
+
+    <table>
+      <thead>
+        <tr><th>Marca</th><th>Modelo</th><th>Año</th><th>Precio</th><th>Color</th></tr>
+      </thead>
+      <tbody id="tabla"></tbody>
+    </table>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
