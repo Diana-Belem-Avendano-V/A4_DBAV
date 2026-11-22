@@ -1,0 +1,31 @@
+### Pruebas del microservicio (extensión REST Client de VS Code)
+### Con el servidor corriendo, da clic en "Send Request" sobre cada petición.
+
+@base = http://localhost:3000
+
+### Estado del servicio
+GET {{base}}/api/health
+
+### Catálogo completo
+GET {{base}}/api/autos
+
+### Filtrar por marca
+GET {{base}}/api/autos?marca=Nissan
+
+### Filtrar por color y ordenar por precio (mayor a menor)
+GET {{base}}/api/autos?color=Rojo&orden=precio&dir=desc
+
+### Autos de hasta $300,000
+GET {{base}}/api/autos?precioMax=300000
+
+### Autos de un año específico
+GET {{base}}/api/autos?anio=2024
+
+### Un auto por id
+GET {{base}}/api/autos/7
+
+### Error 404: id inexistente
+GET {{base}}/api/autos/99
+
+### Error 400: orden inválido
+GET {{base}}/api/autos?orden=xyz
